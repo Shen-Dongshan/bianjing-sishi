@@ -1,0 +1,550 @@
+{
+  "project": "汴京四时",
+  "author": "Shen Dongshan",
+  "timezone": "Europe/Budapest",
+  "formalVersionsOnly": true,
+  "totalVersions": 13,
+  "currentVersion": "V13",
+  "releases": [
+    {
+      "version": 1,
+      "label": "V01",
+      "title": "核心漫游MVP",
+      "date": "2026-10-29",
+      "codeTime": "2026-10-29 17:28:11",
+      "publishedTime": "2026-10-29 17:31:41",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "59bec60360c1eac7e0f81535f087ee6b151bc23d",
+      "parentCommit": null,
+      "changeCounts": {
+        "added": 424,
+        "modified": 0,
+        "deleted": 0
+      },
+      "summary": [
+        "建立全屏长卷展厅，以409张多分辨率瓦片呈现原画。",
+        "实现拖动、滚轮、缩放、自动游览、底部定位、沉浸模式与响应式界面。",
+        "提供基础四季光色、天气粒子与可控合成音乐、风声。"
+      ],
+      "notes": [
+        "此时四季是基础氛围变化，尚无独立四季重绘底图、昼夜系统或人物引导。"
+      ],
+      "keyFiles": [
+        "dist/js/viewer.js",
+        "dist/js/effects.js",
+        "dist/js/audio.js",
+        "dist/assets/scroll.json",
+        "dist/index.html",
+        "dist/style.css"
+      ],
+      "snapshot": {
+        "files": 424,
+        "bytes": 28914850
+      },
+      "sourceNoteSha256": "cc74c2601a2d311b4f3c930551d3faae810ac2f463135196455c2ece689b494b",
+      "sourceRecordSha256": "67d2d82e3b27e7894b785bd1faac491ab10f51fa1d21defddc054502102f2d1c"
+    },
+    {
+      "version": 2,
+      "label": "V02",
+      "title": "人物引导与默认游览",
+      "date": "2026-10-30",
+      "codeTime": "2026-10-30 19:09:37",
+      "publishedTime": "2026-10-30 19:11:29",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "aacd5e74aff5a2a47f803d06a8b825541ed35228",
+      "parentCommit": "59bec60360c1eac7e0f81535f087ee6b151bc23d",
+      "changeCounts": {
+        "added": 6,
+        "modified": 7,
+        "deleted": 0
+      },
+      "summary": [
+        "新增24帧宋代风格引导人物与157个道路锚点，镜头平滑跟随。",
+        "默认启动随行游览，并尝试启音；浏览器拦截时由首次交互解锁。",
+        "手动操作暂停人物与跟随，继续时平滑归位；终点停止并允许重游。"
+      ],
+      "notes": [
+        "本版路线从右端郊野走向左端街市，V03才反转方向。",
+        "道路不可见的部分以淡出隐藏跨接，尚无精确建筑遮挡；人物是AI新创素材。"
+      ],
+      "keyFiles": [
+        "dist/js/guide.js",
+        "dist/assets/guide-route.json",
+        "dist/assets/guide-sprite.json",
+        "dist/assets/guide-walk-v2.png",
+        "scripts/test-guide.mjs"
+      ],
+      "snapshot": {
+        "files": 430,
+        "bytes": 30625854
+      },
+      "sourceNoteSha256": "f5ade6dddef2193d6e8f40c9a99ed36e6d70b9230208d2e11ffa4ea30d85b994",
+      "sourceRecordSha256": "ac1890b5e7fe5895d817f2cf736ff072eb8c599ca5a439b324361b8633c12317"
+    },
+    {
+      "version": 3,
+      "label": "V03",
+      "title": "城内出发与位置音景",
+      "date": "2026-10-31",
+      "codeTime": "2026-10-31 23:31:31",
+      "publishedTime": "2026-10-31 23:33:03",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "2a35e4404bba9f6360e7fa4e14e46d5ae1e81ebb",
+      "parentCommit": "aacd5e74aff5a2a47f803d06a8b825541ed35228",
+      "changeCounts": {
+        "added": 6,
+        "modified": 7,
+        "deleted": 0
+      },
+      "summary": [
+        "引导人物扩大约两倍，游览起点改到左端城内，方向改为城内至郊野。",
+        "新增九个空间混音锚点，市集叫卖与人群随出城渐弱，水流、虫鸟随场景增强。",
+        "新增四段中文合成叫卖，并保持环境音与背景音乐的独立控制。"
+      ],
+      "notes": [
+        "叫卖是Microsoft Huihui合成语音，自然声为程序合成，均非历史现场录音。"
+      ],
+      "keyFiles": [
+        "dist/assets/guide-route.json",
+        "dist/js/guide.js",
+        "dist/js/sound-zones.js",
+        "dist/js/audio.js",
+        "dist/assets/audio/vendor-0.wav",
+        "scripts/test-sound-zones.mjs"
+      ],
+      "snapshot": {
+        "files": 436,
+        "bytes": 31027404
+      },
+      "sourceNoteSha256": "a60dae6c76593d7225b5342d6c32e4e2e025616f44e6a67339918a949bde1588",
+      "sourceRecordSha256": "1f1f1419529feded4e8b6695f53861421212dec652be890813ea7b25917f64fb"
+    },
+    {
+      "version": 4,
+      "label": "V04",
+      "title": "环境微动与昼夜系统",
+      "date": "2026-11-03",
+      "codeTime": "2026-11-03 09:47:49",
+      "publishedTime": "2026-11-03 09:48:46",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "7a82f0bb77943467fc8311b0beb312dd073cd713",
+      "parentCommit": "2a35e4404bba9f6360e7fa4e14e46d5ae1e81ebb",
+      "changeCounts": {
+        "added": 6,
+        "modified": 8,
+        "deleted": 0
+      },
+      "summary": [
+        "加入局部枝叶、水面、船舶、人物的克制微动及分层开关。",
+        "新增清晨、正午、黄昏、夜晚的渐变光照与代表性建筑灯火。",
+        "将四季、昼夜、天气与位置接入环境音混合，并提供原卷静赏。"
+      ],
+      "notes": [
+        "植被仍是程序化局部点染，尚非全卷AI精绘。",
+        "船舶与原画人物采用原位微形变，不是沿航道或街道独立移动。"
+      ],
+      "keyFiles": [
+        "dist/js/environment.js",
+        "dist/assets/environment.json",
+        "dist/js/audio-config.js",
+        "dist/js/audio.js",
+        "dist/js/effects.js",
+        "scripts/test-environment.mjs",
+        "scripts/test-audio-season.mjs"
+      ],
+      "snapshot": {
+        "files": 442,
+        "bytes": 31037002
+      },
+      "sourceNoteSha256": "da9eb616be4696db337241a1b9627c39bda3a5f5d0999e42fab99143aef2ee36",
+      "sourceRecordSha256": "8ea96df44a949504f4eb00607c81f5166f1e62f81bb240af77e78d0c5896a7f1"
+    },
+    {
+      "version": 5,
+      "label": "V05",
+      "title": "虹桥四季AI局部试览",
+      "date": "2026-11-03",
+      "codeTime": "2026-11-03 13:28:44",
+      "publishedTime": "2026-11-03 13:33:38",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "ad7c6355742eae7085eed6df2bc65fd6964ce302",
+      "parentCommit": "7a82f0bb77943467fc8311b0beb312dd073cd713",
+      "changeCounts": {
+        "added": 12,
+        "modified": 4,
+        "deleted": 0
+      },
+      "summary": [
+        "接入用户确认的春夏秋冬虹桥样张，统一画幅并作线描对齐。",
+        "建立局部四季独立底图、平滑过渡、原画对照分界与局部缩放。",
+        "首页暂作虹桥试览，完整长卷保留在scroll.html。"
+      ],
+      "notes": [
+        "四季试览素材来自用户提供的AI重绘样张，不能标为本版新生成的全卷。",
+        "本版尚未扩展为完整长卷四季重绘。"
+      ],
+      "keyFiles": [
+        "dist/js/hongqiao.js",
+        "dist/js/hongqiao-viewer.js",
+        "dist/js/season-blend.js",
+        "dist/assets/hongqiao/manifest.json",
+        "dist/hongqiao.css",
+        "dist/scroll.html"
+      ],
+      "snapshot": {
+        "files": 454,
+        "bytes": 35318934
+      },
+      "sourceNoteSha256": "9ba5cce7865c38c74d5237f274493885b24d88fb09f401d4b755814b943ace07",
+      "sourceRecordSha256": "4ab812bbec9cbeec132cc3f0454ff0b29e6b938e4eb45c728ae0a443f6c867e6"
+    },
+    {
+      "version": 6,
+      "label": "V06",
+      "title": "虹桥试览加载保护",
+      "date": "2026-11-03",
+      "codeTime": "2026-11-03 13:35:20",
+      "publishedTime": "2026-11-03 13:37:02",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "254a063bce89e408915ea3c326fb588e1748d935",
+      "parentCommit": "ad7c6355742eae7085eed6df2bc65fd6964ce302",
+      "changeCounts": {
+        "added": 0,
+        "modified": 3,
+        "deleted": 0
+      },
+      "summary": [
+        "在虹桥图像加载期间禁用四季、对照、游览与缩放按钮。",
+        "素材就绪后统一启用控件，添加等待态样式，避免提前操作未就绪视图。"
+      ],
+      "notes": [
+        "这是V05的加载交互修补，不是新增一轮艺术重绘。"
+      ],
+      "keyFiles": [
+        "dist/index.html",
+        "dist/js/hongqiao.js",
+        "dist/hongqiao.css"
+      ],
+      "snapshot": {
+        "files": 454,
+        "bytes": 35318996
+      },
+      "sourceNoteSha256": "dd69aa8e95bb38e7810e4a0cd2c9a146c9dc1a86ebf4806677a5726045c89b43",
+      "sourceRecordSha256": "99b5ca1a41b9527fbeff2175121122db6dca9122b4b71a4cdf06daa6e46f4bae"
+    },
+    {
+      "version": 7,
+      "label": "V07",
+      "title": "四季全卷与取消试览",
+      "date": "2026-11-03",
+      "codeTime": "2026-11-03 20:33:15",
+      "publishedTime": "2026-11-03 20:35:50",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "1cf529190f9976ebf614e2fe9d7809ef95556b33",
+      "parentCommit": "254a063bce89e408915ea3c326fb588e1748d935",
+      "changeCounts": {
+        "added": 433,
+        "modified": 9,
+        "deleted": 10
+      },
+      "summary": [
+        "将每季九个区段、共36次AI编辑结果配准与修缝，合成四幅统一坐标完整底图。",
+        "将四季共420张WebP分级瓦片接入长卷首页，保留原画409张瓦片用于原卷静赏。",
+        "取消虹桥独立试览及入口，旧scroll.html转回首页；保持导览、音景与昼夜功能。"
+      ],
+      "notes": [
+        "完整画布38414×1800；区段原生生成2048×768，拼接工作图19207×900，最终放大输出不代表新增原生细节。",
+        "四季底图属于当代艺术化重绘，局部人物、建筑和接缝仍有生成差异。",
+        "未纳入Git的完整JPEG、配准记录与保留的区段制作素材，另存于本版制作素材文件夹。"
+      ],
+      "keyFiles": [
+        "dist/js/seasonal-scroll.js",
+        "dist/assets/seasons/manifest.json",
+        "dist/assets/seasons/PROVENANCE.json",
+        "dist/js/environment.js",
+        "scripts/assemble-seasons.py",
+        "scripts/test-seasonal-scroll.mjs",
+        "dist/scroll.html"
+      ],
+      "snapshot": {
+        "files": 877,
+        "bytes": 71538797
+      },
+      "sourceNoteSha256": "f7c539be65b06f9db77f3edf285531a9a13ac8475a0ace6e96d14609b74cbfa7",
+      "sourceRecordSha256": "a22c704da4c355ecbb77495184b71a25cab130aeba1da2eec4aa9bc91838d60f"
+    },
+    {
+      "version": 8,
+      "label": "V08",
+      "title": "完整长卷加载保护",
+      "date": "2026-11-03",
+      "codeTime": "2026-11-03 20:39:05",
+      "publishedTime": "2026-11-03 20:42:18",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "c3622d4262cf52b696b5216839a0bbb0ea61a8a3",
+      "parentCommit": "1cf529190f9976ebf614e2fe9d7809ef95556b33",
+      "changeCounts": {
+        "added": 0,
+        "modified": 3,
+        "deleted": 0
+      },
+      "summary": [
+        "为完整长卷的模式、游览、缩放与场景定位加入加载保护。",
+        "引导人物和四季底图就绪后再启用控件，避免加载阶段误操作。"
+      ],
+      "notes": [
+        "这是V07的启动交互修补，四季底图未再次重绘。"
+      ],
+      "keyFiles": [
+        "dist/index.html",
+        "dist/js/app.js",
+        "dist/style.css"
+      ],
+      "snapshot": {
+        "files": 877,
+        "bytes": 71538896
+      },
+      "sourceNoteSha256": "f3e40d913b5fc10ff88c1c9fc63edd112b0efdff8c7a0d4351f699ba3c50b639",
+      "sourceRecordSha256": "772e359efdc28ba2c8b14cf9f04be41349068c3e976d38dcd97a544c1f1a3a60"
+    },
+    {
+      "version": 9,
+      "label": "V09",
+      "title": "六首背景音乐随机连播",
+      "date": "2026-11-04",
+      "codeTime": "2026-11-03 22:09:49",
+      "publishedTime": "2026-11-04 09:08:48",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "29744d3417d649752b3a6a6d593e77c37fc3e1c8",
+      "parentCommit": "c3622d4262cf52b696b5216839a0bbb0ea61a8a3",
+      "changeCounts": {
+        "added": 10,
+        "modified": 8,
+        "deleted": 0
+      },
+      "summary": [
+        "以用户提供的六首MP3替换原合成背景音乐，保留既有环境音效。",
+        "采用随机袋轮播，每轮播完六首再重排，并避免相邻重复。",
+        "提前预载下一首，曲尾约六秒交叉淡化；保留独立开关、音量、暂停恢复和手动换曲。"
+      ],
+      "notes": [
+        "代码于11月3日提交，11月4日完成发布；归档目录按发布日期命名。",
+        "本次归档保留MP3原字节及来源清单。正常加载以预载和重叠播放衔接，网络或浏览器拦截仍可能影响播放。"
+      ],
+      "keyFiles": [
+        "dist/js/music-player.js",
+        "dist/js/music-tracks.js",
+        "dist/js/audio.js",
+        "dist/assets/music/manifest.json",
+        "dist/index.html",
+        "scripts/test-music-player.mjs"
+      ],
+      "snapshot": {
+        "files": 887,
+        "bytes": 96158153
+      },
+      "sourceNoteSha256": "cf6d64533c6e5d054962693f825ee7c00710106d58d191a5e0b59295b73287fc",
+      "sourceRecordSha256": "5025c01235d5771d978b41388f0ef6f00f19c89f5518028af2ea644c58ecca97"
+    },
+    {
+      "version": 10,
+      "label": "V10",
+      "title": "四季原卷细节保真与原尺寸高清层",
+      "date": "2026-11-04",
+      "codeTime": "2026-11-04 17:05:50",
+      "publishedTime": "2026-11-04 17:17:48",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "4a921586bacdad0b1a60e47971506c21f7929e07",
+      "parentCommit": "29744d3417d649752b3a6a6d593e77c37fc3e1c8",
+      "changeCounts": {
+        "added": 1222,
+        "modified": 437,
+        "deleted": 0
+      },
+      "summary": [
+        "将四季完整底图升级为38414×1800原卷细节底层与AI季节图层合成，重点恢复人物、建筑、道路与舟船的信息量。",
+        "新增4次1536×1024原尺寸AI树木局部深化；道路、虹桥人群与代表性船只设置原卷保护区域，避免AI重画人物。",
+        "季节瓦片增加到四级，共1636张，其中1216张为1:1高清WebP，40张指定导览/虹桥瓦片无损，其余Q95；采用较低层兜底和高清逐块补齐。",
+        "保留人物游览、四季与昼夜、原卷对照、六首随机背景音乐及场景环境音；季节切换不改变镜头。"
+      ],
+      "notes": [
+        "38414×1800是本版真实原尺寸合成画布，高清信息主要来自原卷1:1像素复用。大范围AI自然层仍沿用较早半幅工作素材，不宣称全卷每一像素都是本次原生AI生成。",
+        "新增AI局部输入与输出均为1536×1024；一次4096×1800整段试作实际只返回1891×831，因像素不足和人物不够保真未用于成图。",
+        "独立解码40个导览和虹桥窗口，共52920个颜色通道，均与原卷在已记录的季节RGB设色后逐像素一致。此校验仅覆盖保护窗口，不代表全部自然层逐像素复刻。",
+        "原尺寸底图、AI原始输出、提示词、同坐标近看截图、制作及验证记录保存于本版制作素材；旧版图像与档案保留。",
+        "源仓库单次推送上限64 MiB，部署包上限256 MiB；源分支通过未发布准备提交分批推进，正式Sites只保存和发布全部就绪后的完整提交。无损PNG母版全部保留，网页采用重点片段无损与其他区域Q95的混合编码。"
+      ],
+      "keyFiles": [
+        "dist/js/seasonal-scroll.js",
+        "dist/js/viewer.js",
+        "dist/assets/seasons/manifest.json",
+        "dist/assets/seasons/DETAIL-RESTORATION.json",
+        "dist/assets/seasons/DETAIL-QA.json",
+        "scripts/restore-native-detail.mjs",
+        "scripts/verify-native-source-pixels.mjs",
+        "scripts/test-native-detail.mjs",
+        "dist/assets/seasons/conservation-tiles.json"
+      ],
+      "snapshot": {
+        "files": 2109,
+        "bytes": 258801048
+      },
+      "sourceNoteSha256": "4027e7347397e53faa51c8a04d9856cdcc490b6987b4adb8243a80c12d11ccc0",
+      "sourceRecordSha256": "8fa0450f0520af51d279b0ece865c81cae433f721c378283ead5cc13b480b977"
+    },
+    {
+      "version": 11,
+      "label": "V11",
+      "title": "原尺寸AI四季全卷与自动漫游",
+      "date": "2026-11-06",
+      "codeTime": "2026-11-06 12:26:28",
+      "publishedTime": "2026-11-06 12:29:45",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "746437f92ca5b7e712dd121b62c0dd97d143c644",
+      "parentCommit": "4a921586bacdad0b1a60e47971506c21f7929e07",
+      "changeCounts": {
+        "added": 1652,
+        "modified": 18,
+        "deleted": 0
+      },
+      "summary": [
+        "完成224张1536×1024原生AI分区编辑，制作四张38414×1800四季完整成图；直接展示全卷，不再执行原卷蒙版或季节元素提取。",
+        "默认自由浏览139%并自动漫游，尝试开启配乐和环境音；浏览器拦截时首次交互解锁。随行游览为174%，保留暂停、继续与手动探索。",
+        "四季与清晨、正午、黄昏、夜晚组成16个连续状态，每30秒推进一次、8分钟循环；不改变已暂停的镜头和行走进度。",
+        "六首用户配乐随机轮播，改为曲终或手动换曲时直接切换，无交叉淡化和额外留白；环境音保持独立。",
+        "移除旧河面整块着色，硬边雾区改为柔边低透明度薄雾，修复河面的异常白块。",
+        "新增可直接打开的离线HTML资源封装；公网单独构建必需资源，省略1/2中间缩略层，保留全部1216张原尺寸Q96瓦片且不重新编码。"
+      ],
+      "notes": [
+        "AI图像为当代艺术再创作，局部人物与建筑仍可能有差异，不能视为历史复原。原卷静赏仍可对照。",
+        "工作源与离线版保留四级1636张季节瓦片；公网保留三级1332张，全部1:1高清瓦片与四张无损母版保持不变。",
+        "源素材分5个未发布准备提交上传以满足单次Git推送体积限制；正式Sites只保存并发布完整的V11。",
+        "完整项目ZIP保存本次实际Git提交；制作素材另存四张无损母版、已采用224张分区、输入、提示词、离线完整网页、实际上传部署包和验证证据。未采用结果、额度记录和工作草稿留在工作目录。",
+        "已通过项目检查、1784项公网资源字节校验、2074项离线文件校验和公网浏览器实测；浏览器自动播放权限仍由用户浏览器控制。"
+      ],
+      "keyFiles": [
+        "dist/js/app.js",
+        "dist/js/experience-cycle.js",
+        "dist/js/environment.js",
+        "dist/js/music-player.js",
+        "dist/js/resources.js",
+        "dist/assets/seasons-direct/manifest.json",
+        "dist/assets/seasons-direct/PROVENANCE.json",
+        "scripts/build-web.mjs",
+        "scripts/test-web.mjs",
+        "scripts/build-offline.mjs",
+        ".openai/hosting.json"
+      ],
+      "snapshot": {
+        "files": 3761,
+        "bytes": 481336407
+      },
+      "sourceNoteSha256": "881f1066ba99532fcb69f01014639f155be8bfe9485f8a02d404fc4c9fb82689",
+      "sourceRecordSha256": "310f3887df336a76180a95922114b218416777d73c2f9c17a461e309aed1914c"
+    },
+    {
+      "version": 12,
+      "label": "V12",
+      "title": "展卷入宋与沉浸音景",
+      "date": "2026-11-07",
+      "codeTime": "2026-11-07 14:46:11",
+      "publishedTime": "2026-11-07 14:48:39",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "82e94631c26a4c153bcf749538675bb80763f599",
+      "parentCommit": "746437f92ca5b7e712dd121b62c0dd97d143c644",
+      "changeCounts": {
+        "added": 201,
+        "modified": 19,
+        "deleted": 0
+      },
+      "summary": [
+        "白纸、红褐丝带和檀木色画轴入场，点击启音并展开，展开后自动漫游；自由139%、随行174%。",
+        "增加算法细雨、大雨与细密粉雪；春夏每天随机一个时辰下雨、占一天四分之一，四季时辰每30秒推进。",
+        "18段场景标题随镜头切换，16首宋代诗词随时辰与季节变化，采用四季抽象色印。",
+        "19条环境素材及原创拟音覆盖1152种场景、季节、时辰和天气组合；按用户明确要求包含中文叫卖，公开使用授权待核实。",
+        "修复配乐叠播：备用轨只预载，原生静音与增益共同隔离，异步回调仍强制单轨；增加多页声音互斥。",
+        "右侧更新记录、左下角Shen Dongshan署名与版权信息直接展开，统一小号字体，为画轴留白。",
+        "公网环境音只截取完整MP3帧的有效前段；保持全部1216张原尺寸Q96瓦片和六首配乐原字节，部署包252600320字节。"
+      ],
+      "notes": [
+        "实际Sites V12正式发布于2026-11-07，保持既有公开权限与网址；以publication.json及succeeded返回为准。",
+        "中文叫卖源站标示版权所有趣听科技，公开使用、商用及再分发授权范围待核实，非CC0。项目方要求发布不构成权利人授权。",
+        "其余18条音效按来源页CC0声明使用；现代录音、拟音及AI生成素材均为艺术化音景，不冒充宋代实录。",
+        "四季原尺寸无损母版和224张AI分区本次未改动，已在V11制作素材中保存；本版快照包含实际显示瓦片与全部运行资源。",
+        "多页互斥已在浏览器预览验证，file://跨页通信依浏览器支持；原有页面须刷新载入新逻辑。",
+        "本版另存完整离线网页、实际上传部署包、下载原始音频及来源证据、裁切摘要、源码检查和公网浏览器核验记录。历史正式版本不覆盖。"
+      ],
+      "keyFiles": [
+        "dist/js/publication.js",
+        "dist/js/entry-notes.js",
+        "dist/js/entrance.js",
+        "dist/js/rain.js",
+        "dist/js/snow.js",
+        "dist/js/scene-titles.js",
+        "dist/js/poetry.js",
+        "dist/js/sound-design.js",
+        "dist/js/ambient-engine.js",
+        "dist/js/ambient-assets.js",
+        "dist/js/audio.js",
+        "dist/js/music-player.js",
+        "dist/js/audio-focus.js",
+        "scripts/build-web.mjs",
+        "scripts/ambient-mp3-excerpt.mjs"
+      ],
+      "snapshot": {
+        "files": 3962,
+        "bytes": 539331491
+      },
+      "sourceNoteSha256": "4fb77f0a17e8259fca170e5d4b85f661065ebd11a196c72f1dafe9807a75cf7e",
+      "sourceRecordSha256": "7e8638af8774b837f94ddbe9b2f825f138a72ab49e3b525842cc44c77bfd921c"
+    },
+    {
+      "version": 13,
+      "label": "V13",
+      "title": "素纸展卷与移动端优化",
+      "date": "2026-11-08",
+      "codeTime": "2026-11-08 12:14:25",
+      "publishedTime": "2026-11-08 12:16:33",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "6accf64c3710845b6f9d3c4d4e08bcbcdecbc4d4",
+      "parentCommit": "82e94631c26a4c153bcf749538675bb80763f599",
+      "changeCounts": {
+        "added": 16,
+        "modified": 25,
+        "deleted": 0
+      },
+      "summary": [
+        "开放世界以“开发中”显示，原生按钮禁用，点击与模式处理另有关闭状态保护；继续提供自由漫游、缩放与四时音景。",
+        "发布内置宋体Bianjing Serif，桌面与手机使用同一字形；原始Noto Serif CJK SC字体、OFL 1.1许可和取字形子集记录保留。",
+        "手机使用1.25倍像素上限及总像素预算，自动漫游目标24帧、操作30帧、环境18帧；复用静止底图，减少粒子、局部变形和图像缓存。",
+        "未展卷、关闭动画的暂停画面与隐藏页面避免持续重绘；隐藏页面暂停音频上下文。手机尺寸浏览器实测自动漫游约22帧，静止时全屏重绘为0；不是实际手机表面温度测试。",
+        "同步发布素纸双卷、悬停微启、自然阴影、白天墨色标题、透视雨雪和44处新增室内灯光。"
+      ],
+      "notes": [
+        "四幅38414×1800底图、全部1216张原尺寸季节瓦片与六首配乐保持原字节；网页字体约322KB，部署预算通过。",
+        "307节点路网和双向贯通测试作为开发源代码保存，正式页面尚未开放此模式。",
+        "保留原有版权声明；中文叫卖与游戏配乐的公开使用授权范围仍待项目方核实。",
+        "移动端渲染以响应式浏览器验证，无法据此承诺所有手机的实际温度或耗电量。"
+      ],
+      "keyFiles": [
+        "dist/js/render-policy.js",
+        "dist/js/viewer.js",
+        "dist/js/seasonal-scroll.js",
+        "dist/js/app.js",
+        "dist/js/audio.js",
+        "dist/assets/fonts",
+        "dist/index.html",
+        "dist/entrance.css",
+        "docs/移动端字体与性能.md",
+        "scripts/test-render-policy.mjs"
+      ],
+      "snapshot": {
+        "files": 3978,
+        "bytes": 539705535
+      },
+      "sourceNoteSha256": "0d09c7193f893254019118d08bd5e2abad13ab5128f79bb05ed895c171025908",
+      "sourceRecordSha256": "72a5a0812789a98d077b57f0c4233d1906a24f0f1df7df9d698ceac4c827732b"
+    }
+  ]
+}
