@@ -1,4 +1,4 @@
-name: Deploy Bianjing Seasons V13
+name: Deploy Bianjing Seasons
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Download the verified V13 website
         run: |
-          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/v13-site/site.zip
+          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/V13_bianjing/site.zip
           echo "7f517f9001c622f1a8696c412179b9b674e3d1c7a02209c57c5d82d416fd07e3  site.zip" | sha256sum --check -
       - name: Verify and extract public assets
         run: |

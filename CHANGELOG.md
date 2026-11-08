@@ -240,6 +240,6 @@
 
 [结构化版本索引](docs/releases/index.json)保存同一组正式记录及源日志摘要，便于核对和后续同步。草稿与未发布迭代继续留在工作目录。
 
-## 托管补记 · 2026-11-08
+## 主站发布 · 2026-11-08
 
-现有 V13 的独立托管测试已发布到 [GitHub Pages](https://shen-dongshan.github.io/bianjing-sishi/)。本次同步的是同一正式版资源，功能版本号继续沿用 V13；原 OpenAI 站点保留。
+[GitHub Pages](https://shen-dongshan.github.io/bianjing-sishi/)为项目正式主站，后续网页、发行版和更新日志以本仓库为主要发布入口。当前正式功能版本为 V13，发行版命名采用 V13_bianjing。
