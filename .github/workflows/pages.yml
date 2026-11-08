@@ -1,0 +1,61 @@
+name: Deploy Bianjing Seasons V13
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/pages.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download the verified V13 website
+        run: |
+          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/v13-site/site.zip
+          echo "7f517f9001c622f1a8696c412179b9b674e3d1c7a02209c57c5d82d416fd07e3  site.zip" | sha256sum --check -
+      - name: Verify and extract public assets
+        run: |
+          python3 - <<'PY'
+          import pathlib, stat, zipfile
+          target = pathlib.Path("site").resolve()
+          with zipfile.ZipFile("site.zip") as bundle:
+              entries = [entry for entry in bundle.infolist() if not entry.is_dir()]
+              assert len(entries) == 1820, "Unexpected public file count"
+              assert sum(entry.file_size for entry in entries) == 251658568, "Unexpected unpacked size"
+              for entry in entries:
+                  parts = pathlib.PurePosixPath(entry.filename).parts
+                  assert not pathlib.PurePosixPath(entry.filename).is_absolute()
+                  assert ".." not in parts
+                  assert not any(part.startswith(".") for part in parts), "Private state must never be deployed"
+                  assert not stat.S_ISLNK(entry.external_attr >> 16)
+                  destination = (target / entry.filename).resolve()
+                  assert destination.is_relative_to(target)
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_bytes(bundle.read(entry))
+          assert (target / "index.html").is_file()
+          (target / ".nojekyll").write_text("")
+          print("Verified 1820 original V13 website assets.")
+          PY
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
