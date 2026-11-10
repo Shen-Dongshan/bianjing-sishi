@@ -3,8 +3,8 @@
   "author": "Shen Dongshan",
   "timezone": "Europe/Budapest",
   "formalVersionsOnly": true,
-  "totalVersions": 13,
-  "currentVersion": "V13",
+  "totalVersions": 14,
+  "currentVersion": "V14",
   "releases": [
     {
       "version": 1,
@@ -16,6 +16,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "59bec60360c1eac7e0f81535f087ee6b151bc23d",
       "parentCommit": null,
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 424,
         "modified": 0,
@@ -54,6 +57,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "aacd5e74aff5a2a47f803d06a8b825541ed35228",
       "parentCommit": "59bec60360c1eac7e0f81535f087ee6b151bc23d",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 6,
         "modified": 7,
@@ -92,6 +98,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "2a35e4404bba9f6360e7fa4e14e46d5ae1e81ebb",
       "parentCommit": "aacd5e74aff5a2a47f803d06a8b825541ed35228",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 6,
         "modified": 7,
@@ -130,6 +139,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "7a82f0bb77943467fc8311b0beb312dd073cd713",
       "parentCommit": "2a35e4404bba9f6360e7fa4e14e46d5ae1e81ebb",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 6,
         "modified": 8,
@@ -170,6 +182,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "ad7c6355742eae7085eed6df2bc65fd6964ce302",
       "parentCommit": "7a82f0bb77943467fc8311b0beb312dd073cd713",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 12,
         "modified": 4,
@@ -209,6 +224,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "254a063bce89e408915ea3c326fb588e1748d935",
       "parentCommit": "ad7c6355742eae7085eed6df2bc65fd6964ce302",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 0,
         "modified": 3,
@@ -243,6 +261,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "1cf529190f9976ebf614e2fe9d7809ef95556b33",
       "parentCommit": "254a063bce89e408915ea3c326fb588e1748d935",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 433,
         "modified": 9,
@@ -284,6 +305,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "c3622d4262cf52b696b5216839a0bbb0ea61a8a3",
       "parentCommit": "1cf529190f9976ebf614e2fe9d7809ef95556b33",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 0,
         "modified": 3,
@@ -318,6 +342,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "29744d3417d649752b3a6a6d593e77c37fc3e1c8",
       "parentCommit": "c3622d4262cf52b696b5216839a0bbb0ea61a8a3",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 10,
         "modified": 8,
@@ -357,6 +384,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "4a921586bacdad0b1a60e47971506c21f7929e07",
       "parentCommit": "29744d3417d649752b3a6a6d593e77c37fc3e1c8",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 1222,
         "modified": 437,
@@ -403,6 +433,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "746437f92ca5b7e712dd121b62c0dd97d143c644",
       "parentCommit": "4a921586bacdad0b1a60e47971506c21f7929e07",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 1652,
         "modified": 18,
@@ -453,6 +486,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "82e94631c26a4c153bcf749538675bb80763f599",
       "parentCommit": "746437f92ca5b7e712dd121b62c0dd97d143c644",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 201,
         "modified": 19,
@@ -509,6 +545,9 @@
       "timezone": "Europe/Budapest",
       "codeCommit": "6accf64c3710845b6f9d3c4d4e08bcbcdecbc4d4",
       "parentCommit": "82e94631c26a4c153bcf749538675bb80763f599",
+      "provider": "Sites",
+      "releaseUrl": null,
+      "deploymentUrl": null,
       "changeCounts": {
         "added": 16,
         "modified": 25,
@@ -545,6 +584,67 @@
       },
       "sourceNoteSha256": "0d09c7193f893254019118d08bd5e2abad13ab5128f79bb05ed895c171025908",
       "sourceRecordSha256": "72a5a0812789a98d077b57f0c4233d1906a24f0f1df7df9d698ceac4c827732b"
+    },
+    {
+      "version": 14,
+      "label": "V14",
+      "title": "画中闲话与流畅漫游",
+      "date": "2026-11-10",
+      "codeTime": "2026-11-10 17:50:02",
+      "publishedTime": "2026-11-10 17:58:12",
+      "timezone": "Europe/Budapest",
+      "codeCommit": "bd86818490af550050644c1dcc9ffd9e33b165c4",
+      "parentCommit": "6accf64c3710845b6f9d3c4d4e08bcbcdecbc4d4",
+      "provider": "GitHub Pages",
+      "releaseUrl": "https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing",
+      "deploymentUrl": "https://github.com/Shen-Dongshan/bianjing-sishi/actions/runs/42859554537",
+      "changeCounts": {
+        "added": 159,
+        "modified": 21,
+        "deleted": 0
+      },
+      "summary": [
+        "新增36处人物场景、67个人物点位和251组不重复对白，覆盖十八段长卷；增加四处阁楼闲话，随季节、时辰与天气选词。",
+        "半透明小号气泡固定于人物的画卷坐标，最多两组；按四季底图校准头肩位置，移除无人点位，枝叶遮挡的人物按季节停用。",
+        "连线只在人物近处落位，初次不超过28像素、缩放后超过42像素淡出；避开边缘及界面，虹桥延长阅读和重访间隔。",
+        "手机自动档以60帧为目标，按负载调整清晰度；复用高清漫游和季节过渡缓冲，提供自动、清晰优先、省电三档。",
+        "底部长卷缩略导航支持鼠标与触屏拖动，保留缩放；暂停后可点击中央50%透明度的图标继续，标签页标题简化为汴京四时。",
+        "将当前离线审阅成果作为V14_bianjing发布到GitHub主站，保留全部高清瓦片、配乐、环境音及作者版权说明。",
+        "公网脚本、样式与字体采用统一内容版本标识，避免更新后复用旧版模块缓存。"
+      ],
+      "notes": [
+        "人物对白、称谓与季节天气反应均为项目原创艺术演绎，非史料原文，不代表画中人物真实身份；没有生成新的语音对白。",
+        "本次未重绘四季底图，四幅38414×1800母版、全部1216张原尺寸Q96瓦片及六首配乐保持原字节。公网保留三级1332张季节瓦片，离线包保留四级1636张。",
+        "19条环境音包括中文叫卖。既有素材署名、来源及授权待核实说明完整保留；原画公有领域标记不延伸到游戏配乐和中文叫卖。",
+        "桌面与手机尺寸的浏览器、八次全卷对话覆盖及资源摘要检查通过；60帧为目标值，未作所有实体手机温度、耗电或中国大陆网络可达性保证。",
+        "开放世界继续显示开发中且不可点击；自由浏览、自动漫游、四季昼夜天气与独立音乐环境音控制继续开放。",
+        "完整四季母版与分区原图沿用既有正式素材档案；本次快照保存全部运行资源、源码、人物点位核对页和测试脚本。"
+      ],
+      "keyFiles": [
+        "dist/js/dialogue-data.js",
+        "dist/js/dialogue-engine.js",
+        "dist/js/dialogue-layer.js",
+        "dist/js/render-policy.js",
+        "dist/js/seasonal-scroll.js",
+        "dist/js/viewer.js",
+        "dist/js/scroll-navigation.js",
+        "dist/js/publication.js",
+        "dist/style.css",
+        "dist/assets/fonts",
+        "docs/人物情景对话.md",
+        "reviews/人物点位核对",
+        "scripts/test-dialogue-coverage.mjs",
+        "scripts/prepare-independent-hosting.mjs",
+        "scripts/web-revision.mjs",
+        "scripts/build-web.mjs",
+        "scripts/test-web.mjs"
+      ],
+      "snapshot": {
+        "files": 4137,
+        "bytes": 551127821
+      },
+      "sourceNoteSha256": "4aa35d58b7ab33d20373b210a487a3d84991ee8b60df7896b0098232dbdd3b52",
+      "sourceRecordSha256": "d4002416014de8dcc9ba4fc850d2ee7b0076efeb8f84d1268b23b3fccb9d4821"
     }
   ]
 }
