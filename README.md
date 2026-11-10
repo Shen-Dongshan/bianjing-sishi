@@ -2,19 +2,21 @@
 
 以张择端《清明上河图》为底本的沉浸式数字艺术长卷。在汴河、市井与郊野之间缓慢漫游，静观四季、昼夜与雨雪流转。
 
-[在线体验](https://shen-dongshan.github.io/bianjing-sishi/) · [下载 V13_bianjing](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V13_bianjing) · [完整更新日志](CHANGELOG.md) · [反馈问题](https://github.com/Shen-Dongshan/bianjing-sishi/issues)
+[在线体验](https://shen-dongshan.github.io/bianjing-sishi/) · [下载 V14_bianjing](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) · [完整更新日志](CHANGELOG.md) · [反馈问题](https://github.com/Shen-Dongshan/bianjing-sishi/issues)
 
 ## 项目概览
 
 - **主站**：https://shen-dongshan.github.io/bianjing-sishi/
-- **当前版本**：`V13_bianjing`（V13 · 素纸展卷与移动端优化）
+- **当前版本**：`V14_bianjing`（V14 · 画中闲话与流畅漫游）
 - **作者**：[Shen Dongshan](https://github.com/Shen-Dongshan)
-- **发布日期**：2026-11-08（Europe/Budapest）
+- **发布日期**：2026-11-10（Europe/Budapest）
 - **形式**：全屏横向数字长卷，桌面与移动端均可浏览。
 
 ## 主要功能
 
-- 横向拖动、滚轮漫游、平滑缩放、自动游览及底部长卷导航。
+- 横向拖动、滚轮漫游、平滑缩放、自动游览及可拖动的底部长卷缩略导航；暂停时可点击中央半透明图标继续。
+- 36处场景、67个人物点位及251组对白覆盖全卷，含4处阁楼场景；轻量半透明气泡随人物坐标移动，最多两组，虹桥节奏放缓。
+- 手机自动档以60帧为目标，按设备负载调整清晰度，提供自动、清晰优先、省电三档；实际帧率取决于设备。
 - 春、夏、秋、冬四幅 38414 × 1800 AI 辅助重绘底图，按视口加载多分辨率瓦片，并保留原卷静赏。
 - 清晨、正午、黄昏、夜晚与四季组成 16 个状态，每 30 秒推进一次，可手动切换或暂停自动流转。
 - 细雨、大雨、粉雪与远近分层天气；春夏随机一个时辰落雨，冬季默认飘雪。
@@ -32,14 +34,16 @@
 | --- | --- |
 | 漫游 | 鼠标或单指拖动；滚轮、触摸板滑动 |
 | 缩放 | Ctrl / ⌘ + 滚轮；双指缩放；页面加减按钮 |
-| 自动游览 | 页面底部暂停 / 继续，支持三档速度 |
+| 自动游览 | 页面底部暂停 / 继续，支持三档速度；暂停后也可点击画面中央继续 |
+| 缩略导航 | 点击或拖动底部长卷，保持当前缩放 |
+| 人物对白与画质 | “调息”中可关闭对白，并选择自动、清晰优先或省电 |
 | 四季与昼夜 | 右侧四季、顶部时辰；在“调息”中控制自动流转 |
 | 声音与天气 | 在“调息”中分别调节音乐、环境音、音量及天气 |
 | 沉浸 | 页面沉浸按钮；Esc 返回 |
 
 ### 本地运行
 
-从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V13_bianjing) 下载 `site.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1820 个文件。
+从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) 下载 `site.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1824 个文件。
 
 在解压目录启动任意静态 HTTP 服务。例如已安装 Python 3 时：
 
@@ -53,7 +57,7 @@ python -m http.server 8000
 
 ```text
 SHA-256 (site.zip)
-7f517f9001c622f1a8696c412179b9b674e3d1c7a02209c57c5d82d416fd07e3
+12406409c1005e96d7fe6b331eaf04a88a915cc0abe7aa900aea6c9077e9698a
 ```
 
 ## 作者与制作
@@ -156,6 +160,10 @@ SHA-256 (site.zip)
 
 </details>
 
+### 画中闲话
+
+人物称谓、对话与季节天气反应由本项目创作，属于艺术化演绎，非史料原文，也不代表画中人物的真实身份。点位按四季底图逐场景校准；枝叶遮挡的人物按季节停用。
+
 ### 使用说明与致谢
 
 原创内容署名：© 2026 Shen Dongshan。第三方素材的作者与授权范围以上述逐项记录为准；如需复用，请核对对应素材的许可与权利人授权。
@@ -163,6 +171,17 @@ SHA-256 (site.zip)
 体验参考：[xianxie6 / qingming-riverside](https://github.com/xianxie6/qingming-riverside)。感谢原作、数字复制图、字体、音景与配乐的创作者及资料提供者。
 
 ## 更新日志
+
+### V14_bianjing · 2026-11-10
+
+- 新增覆盖全卷的轻量人物对白、四处阁楼场景与四季人物点位校准；半透明小号气泡保持人物坐标，缩短连线并避开边缘。
+- 对话分布更均匀，虹桥节奏放缓，保留最多两组及场景冷却。
+- 提高手机默认画质与流畅度，复用高清缓冲，增加三档画质控制。
+- 支持拖动缩略长卷、点击中央半透明图标继续漫游；标签页标题简化为“汴京四时”。
+- 完整保留原尺寸四季图、全部高清瓦片、六首配乐与含中文叫卖的19条环境音；开放世界仍在开发中。
+
+[V14 完整记录](docs/releases/V14.md) · [全部开发日志](CHANGELOG.md)
+
 
 ### V13_bianjing · 2026-11-08
 
@@ -178,6 +197,7 @@ SHA-256 (site.zip)
 
 | 版本 | 发布日期 | 更新主题 |
 | --- | --- | --- |
+| [V14](docs/releases/V14.md) | 2026-11-10 | 画中闲话与流畅漫游 |
 | [V13](docs/releases/V13.md) | 2026-11-08 | 素纸展卷与移动端优化 |
 | [V12](docs/releases/V12.md) | 2026-11-07 | 展卷入宋与沉浸音景 |
 | [V11](docs/releases/V11.md) | 2026-11-06 | 原尺寸AI四季全卷与自动漫游 |

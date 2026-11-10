@@ -6,7 +6,7 @@
 
 仓库：https://github.com/Shen-Dongshan/bianjing-sishi
 
-当前发行版：`V13_bianjing`。后续正式功能版本连续编号，发行版标题和标签采用`Vxx_bianjing`，日期以Europe/Budapest的实际发布时间记录。
+当前发行版：`V14_bianjing`。后续正式功能版本连续编号，发行版标题和标签采用`Vxx_bianjing`，日期以Europe/Budapest的实际发布时间记录。
 
 ## 网页资源
 
