@@ -43,7 +43,7 @@
 
 ### 本地运行
 
-从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) 下载 `site.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1824 个文件。
+从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) 下载 `site-v14.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1824 个文件。
 
 在解压目录启动任意静态 HTTP 服务。例如已安装 Python 3 时：
 
@@ -53,11 +53,11 @@ python -m http.server 8000
 
 随后访问 `http://localhost:8000`。无需前端依赖安装或额外构建；ES Modules 与资源请求需要 HTTP 服务。
 
-请选择发行版附件 `site.zip`；GitHub 自动生成的 Source code 压缩包对应仓库中的文档与发布配置。
+请选择发行版附件 `site-v14.zip`；GitHub 自动生成的 Source code 压缩包对应仓库中的文档与发布配置。
 
 ```text
-SHA-256 (site.zip)
-12406409c1005e96d7fe6b331eaf04a88a915cc0abe7aa900aea6c9077e9698a
+SHA-256 (site-v14.zip)
+7c373e5342d2e97601d4831015d709940e9dd82bd0af76cf9d73095520584a44
 ```
 
 ## 作者与制作
@@ -177,6 +177,7 @@ SHA-256 (site.zip)
 - 新增覆盖全卷的轻量人物对白、四处阁楼场景与四季人物点位校准；半透明小号气泡保持人物坐标，缩短连线并避开边缘。
 - 对话分布更均匀，虹桥节奏放缓，保留最多两组及场景冷却。
 - 提高手机默认画质与流畅度，复用高清缓冲，增加三档画质控制。
+- 为脚本、样式与字体加入统一版本，避免更新时复用旧缓存。
 - 支持拖动缩略长卷、点击中央半透明图标继续漫游；标签页标题简化为“汴京四时”。
 - 完整保留原尺寸四季图、全部高清瓦片、六首配乐与含中文叫卖的19条环境音；开放世界仍在开发中。
 

@@ -25,8 +25,8 @@ jobs:
     steps:
       - name: Download the verified V14 website
         run: |
-          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/V14_bianjing/site.zip
-          echo "12406409c1005e96d7fe6b331eaf04a88a915cc0abe7aa900aea6c9077e9698a  site.zip" | sha256sum --check -
+          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/V14_bianjing/site-v14.zip
+          echo "7c373e5342d2e97601d4831015d709940e9dd82bd0af76cf9d73095520584a44  site.zip" | sha256sum --check -
       - name: Verify and extract public assets
         run: |
           python3 - <<'PY'
@@ -35,7 +35,7 @@ jobs:
           with zipfile.ZipFile("site.zip") as bundle:
               entries = [entry for entry in bundle.infolist() if not entry.is_dir()]
               assert len(entries) == 1824, "Unexpected public file count"
-              assert sum(entry.file_size for entry in entries) == 251794528, "Unexpected unpacked size"
+              assert sum(entry.file_size for entry in entries) == 251795687, "Unexpected unpacked size"
               for entry in entries:
                   parts = pathlib.PurePosixPath(entry.filename).parts
                   assert not pathlib.PurePosixPath(entry.filename).is_absolute()
