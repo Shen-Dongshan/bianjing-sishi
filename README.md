@@ -2,14 +2,14 @@
 
 以张择端《清明上河图》为底本的沉浸式数字艺术长卷。在汴河、市井与郊野之间缓慢漫游，静观四季、昼夜与雨雪流转。
 
-[在线体验](https://shen-dongshan.github.io/bianjing-sishi/) · [下载 V14_bianjing](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) · [完整更新日志](CHANGELOG.md) · [反馈问题](https://github.com/Shen-Dongshan/bianjing-sishi/issues)
+[在线体验](https://shen-dongshan.github.io/bianjing-sishi/) · [下载 V15_bianjing](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V15_bianjing) · [完整更新日志](CHANGELOG.md) · [反馈问题](https://github.com/Shen-Dongshan/bianjing-sishi/issues)
 
 ## 项目概览
 
 - **主站**：https://shen-dongshan.github.io/bianjing-sishi/
-- **当前版本**：`V14_bianjing`（V14 · 画中闲话与流畅漫游）
+- **当前版本**：`V15_bianjing`（V15 · 手机配乐播放修复）
 - **作者**：[Shen Dongshan](https://github.com/Shen-Dongshan)
-- **发布日期**：2026-11-10（Europe/Budapest）
+- **发布日期**：2026-11-11（Europe/Budapest）
 - **形式**：全屏横向数字长卷，桌面与移动端均可浏览。
 
 ## 主要功能
@@ -20,7 +20,7 @@
 - 春、夏、秋、冬四幅 38414 × 1800 AI 辅助重绘底图，按视口加载多分辨率瓦片，并保留原卷静赏。
 - 清晨、正午、黄昏、夜晚与四季组成 16 个状态，每 30 秒推进一次，可手动切换或暂停自动流转。
 - 细雨、大雨、粉雪与远近分层天气；春夏随机一个时辰落雨，冬季默认飘雪。
-- 场景、季节、时辰与天气共同调节环境音；六首配乐随机直接切换，音乐与环境音独立控制。
+- 场景、季节、时辰与天气共同调节环境音；六首配乐复用同一播放器随机直接切换，音乐与环境音独立控制；修复手机音频恢复时配乐可能暂停的问题。
 - 18 段场景标题、16 首宋代诗词、素纸展卷入场、沉浸模式与统一宋体字形。
 - 开放世界仍在开发中，当前入口禁用；自由浏览与自动漫游正常开放。
 
@@ -43,7 +43,7 @@
 
 ### 本地运行
 
-从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V14_bianjing) 下载 `site-v14.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1824 个文件。
+从 [Releases](https://github.com/Shen-Dongshan/bianjing-sishi/releases/tag/V15_bianjing) 下载 `site-v15.zip` 并解压。该包包含完整可运行网页、画卷瓦片、字体、配乐与环境音，共 1824 个文件。
 
 在解压目录启动任意静态 HTTP 服务。例如已安装 Python 3 时：
 
@@ -53,11 +53,11 @@ python -m http.server 8000
 
 随后访问 `http://localhost:8000`。无需前端依赖安装或额外构建；ES Modules 与资源请求需要 HTTP 服务。
 
-请选择发行版附件 `site-v14.zip`；GitHub 自动生成的 Source code 压缩包对应仓库中的文档与发布配置。
+请选择发行版附件 `site-v15.zip`；GitHub 自动生成的 Source code 压缩包对应仓库中的文档与发布配置。
 
 ```text
-SHA-256 (site-v14.zip)
-7c373e5342d2e97601d4831015d709940e9dd82bd0af76cf9d73095520584a44
+SHA-256 (site-v15.zip)
+01140ce7845a0c6092e30e44289b6fb2c94baf89452276afcac610e9d6ca3fd9
 ```
 
 ## 作者与制作
@@ -172,7 +172,7 @@ SHA-256 (site-v14.zip)
 
 ## 更新日志
 
-### V14_bianjing · 2026-11-10
+### V15_bianjing · 2026-11-10
 
 - 新增覆盖全卷的轻量人物对白、四处阁楼场景与四季人物点位校准；半透明小号气泡保持人物坐标，缩短连线并避开边缘。
 - 对话分布更均匀，虹桥节奏放缓，保留最多两组及场景冷却。
@@ -198,6 +198,7 @@ SHA-256 (site-v14.zip)
 
 | 版本 | 发布日期 | 更新主题 |
 | --- | --- | --- |
+| [V15](docs/releases/V15.md) | 2026-11-11 | 手机配乐播放修复 |
 | [V14](docs/releases/V14.md) | 2026-11-10 | 画中闲话与流畅漫游 |
 | [V13](docs/releases/V13.md) | 2026-11-08 | 素纸展卷与移动端优化 |
 | [V12](docs/releases/V12.md) | 2026-11-07 | 展卷入宋与沉浸音景 |

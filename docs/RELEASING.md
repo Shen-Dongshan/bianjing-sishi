@@ -6,20 +6,20 @@
 
 仓库：https://github.com/Shen-Dongshan/bianjing-sishi
 
-当前发行版：`V14_bianjing`。后续正式功能版本连续编号，发行版标题和标签采用`Vxx_bianjing`，日期以Europe/Budapest的实际发布时间记录。
+当前发行版：`V15_bianjing`。后续正式功能版本连续编号，发行版标题和标签采用`Vxx_bianjing`，日期以Europe/Budapest的实际发布时间记录。
 
-当前V14附件为`site-v14.zip`；早先的`site.zip`保留初次上线记录。后续更新可先上传新的独立附件，确认完整后再切换工作流下载地址与摘要，保留旧附件路径直到新部署成功。
+当前V15附件为`site-v15.zip`；早先的`site.zip`保留初次上线记录。后续更新可先上传新的独立附件，确认完整后再切换工作流下载地址与摘要，保留旧附件路径直到新部署成功。
 
 ## 网页资源
 
-正式版网页资源以Release附件`site.zip`发布，根目录包含`index.html`。包内包含页面脚本、样式、画卷、字体与音频；发布前核对所需资源清单、版权来源和文件摘要。
+正式版网页资源以Release附件`site-v15.zip`发布，根目录包含`index.html`。包内包含页面脚本、样式、画卷、字体与音频；发布前核对所需资源清单、版权来源和文件摘要。
 
-GitHub自动生成的Source code压缩包对应仓库中的文档与发布配置。完整可运行网页请选择Release附件`site.zip`。
+GitHub自动生成的Source code压缩包对应仓库中的文档与发布配置。完整可运行网页请选择Release附件`site-v15.zip`。
 
 ## 发布步骤
 
 1. 在工作目录完成修改、资源核验和浏览器检查，按正式版本生成纯网页资源包。
-2. 建立对应Release，采用`Vxx_bianjing`命名，上传审核后的`site.zip`，填写更新内容、作者版权、运行方法和SHA-256。
+2. 建立对应Release，采用`Vxx_bianjing`命名，上传审核后的`site-vxx.zip`，填写更新内容、作者版权、运行方法和SHA-256。
 3. 更新`.github/workflows/pages.yml`中的资源包下载地址、预期SHA-256、文件数与展开字节数。工作流先校验再部署。
 4. 以正常快进提交更新main，保留历史记录。等待Pages工作流成功，并检查主站实际页面及资源。
 5. 完成正式档案，更新README、CHANGELOG及`docs/releases/`中的逐版记录，核对链接与线上内容。
