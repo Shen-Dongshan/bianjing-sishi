@@ -23,10 +23,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download the verified V14 website
+      - name: Download the verified V15 website
         run: |
-          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/V14_bianjing/site-v14.zip
-          echo "7c373e5342d2e97601d4831015d709940e9dd82bd0af76cf9d73095520584a44  site.zip" | sha256sum --check -
+          curl --fail --location --retry 3 --output site.zip https://github.com/Shen-Dongshan/bianjing-sishi/releases/download/V15_bianjing/site-v15.zip
+          echo "01140ce7845a0c6092e30e44289b6fb2c94baf89452276afcac610e9d6ca3fd9  site.zip" | sha256sum --check -
       - name: Verify and extract public assets
         run: |
           python3 - <<'PY'
@@ -35,7 +35,7 @@ jobs:
           with zipfile.ZipFile("site.zip") as bundle:
               entries = [entry for entry in bundle.infolist() if not entry.is_dir()]
               assert len(entries) == 1824, "Unexpected public file count"
-              assert sum(entry.file_size for entry in entries) == 251795687, "Unexpected unpacked size"
+              assert sum(entry.file_size for entry in entries) == 251800927, "Unexpected unpacked size"
               for entry in entries:
                   parts = pathlib.PurePosixPath(entry.filename).parts
                   assert not pathlib.PurePosixPath(entry.filename).is_absolute()
@@ -48,7 +48,7 @@ jobs:
                   destination.write_bytes(bundle.read(entry))
           assert (target / "index.html").is_file()
           (target / ".nojekyll").write_text("")
-          print("Verified 1824 original V14 website assets.")
+          print("Verified 1824 original V15 website assets.")
           PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
